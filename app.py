@@ -17,7 +17,7 @@ with open("fake_leak1.json", "r", encoding="utf-8") as f:
 @app.route("/")
 def home():
     return jsonify({
-        "API TYPE": "AADHAR NUMBER TO TRIP DETAILS.",
+        "API TYPE": "AADHAR TO TRIP DETAILS.",
         "OWNER": "MORTAL"
     })
 
