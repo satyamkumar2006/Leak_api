@@ -82,7 +82,7 @@ def get_record(record_id: int):
         return jsonify({"error": "Record not found"}), 404
 
 # Search by Aadhaar-like number (partial or full)
-@app.route("/aadhar", defaults={"aadhar_query": None}, methods=["GET"])
+@app.route("/aadhar/", defaults={"aadhar_query": None}, methods=["GET"])
 @app.route("/aadhar/<string:aadhar_query>", methods=["GET"])
 def search_by_aadhar(aadhar_query: str):
     """
