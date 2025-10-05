@@ -6,6 +6,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
+app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True
 CORS(app)  # Enable CORS for all routes
 
 # Load dataset
@@ -16,7 +17,7 @@ with open("fake_leak1.json", "r", encoding="utf-8") as f:
 @app.route("/")
 def home():
     return jsonify({
-        "API TYPE": "AADHAR NUMBER TO TRIP DETAILS API",
+        "API TYPE": "AADHAR NUMBER TO TRIP DETAILS.",
         "OWNER": "MORTAL"
     })
 
